@@ -18,6 +18,13 @@ return array_odd;
 }
 
 //1c
+function double(array) {
+	var mapResult = array.map(function (item, index, array) {
+		return item*2;
+	} 
+
+	);
+}
 
 
 //1d
@@ -41,3 +48,24 @@ sum += h;
 }
 return sum;
 }
+
+// come andava fatto:
+
+var array = [1,2,3,4,5,6];
+
+array
+	.filter(function (element) {
+return element %2 === 0;
+})
+
+.map (function (element) {
+return element *2;
+})
+
+.filter(function (element) {
+return element %4 ===0;
+})
+
+.reduce(fucntion (a,b) {
+return a+b;
+});

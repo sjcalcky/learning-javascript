@@ -48,3 +48,24 @@ sum += h;
 }
 return sum;
 }
+
+// come andava fatto: fa in catena tutte le operazioni richieste! NON fa una funzione per ogni operazione!!
+
+var array = [1,2,3,4,5,6];
+
+array
+	.filter(function (element) {
+return element %2 === 0;
+})
+
+.map (function (element) {
+return element *2;
+})
+
+.filter(function (element) {
+return element %4 ===0;
+})
+
+.reduce(fucntion (a,b) {
+return a+b;
+});
